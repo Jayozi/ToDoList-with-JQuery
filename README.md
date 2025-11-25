@@ -23,16 +23,18 @@ Interaktywna aplikacja lista zadań (To-Do List) stworzona przy użyciu HTML, CS
 ---
 
 ## Struktura projektu
+
 /todo-project
 │
 ├── index.html
 ├── css/
-│ └── style.css
+│   └── style.css
 ├── js/
-│ ├── app.js
-│ └── storage.js
+│   ├── app.js
+│   └── storage.js
 └── data/
-└── sample.json
+    └── sample.json
+
 
 ---
 
