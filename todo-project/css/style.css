@@ -1,0 +1,266 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+#ToDoContainer, .filters, #progressContainer {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+#inputToDo {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 40%;
+}
+
+#addToDo {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#addToDo:hover {
+    background-color: #45a049;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.filters button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2196f3;
+    color: white;
+    transition: all 0.2s;
+}
+.filters button:hover {
+    background-color: #1976d2;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 5px 0;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+
+.unfinished {
+    color: red;
+    font-weight: bold;
+}
+
+.finished {
+    color: green;
+    font-weight: bold;
+}
+
+.unfinished:hover {
+    background-color: rgba(210, 140, 140, 0.671);
+    color: black;
+}
+
+.finished:hover {
+    background-color: rgb(128, 177, 128);
+    color: black;
+}
+
+
+.completedButtonStyle {
+    padding: 5px;
+    cursor: pointer;
+    color: black;
+}
+
+.delete {
+    padding: 5px 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    transition: all 0.2s;
+}
+
+
+
+/* --- Efekt hover dla przycisków --- */
+button.hovered, .completedButtonStyle.hovered {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+/* --- Pulsowanie przycisku Dodaj --- */
+#addToDo.pulse {
+    animation: pulseAnim 0.3s;
+}
+
+@keyframes pulseAnim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* --- Pasek postępu --- */
+#progressContainer {
+    width: 100%;
+    background: #e0e0e0;
+    height: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+#progressBar {
+    width: 0%;
+    height: 100%;
+    background: #4caf50;
+    border-radius: 8px;
+    transition: width 0.3s;
+}
+
+/* --- Theme switcher --- */
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.theme-switcher label {
+    cursor: pointer;
+}
+
+#toggleTheme {
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* --- Import / Export buttons --- */
+#importTasks, #exportTasks {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ff9800; 
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-right: 10px;
+    transition: all 0.2s;
+}
+
+#importTasks:hover, #exportTasks:hover {
+    background-color: #fb8c00;
+}
+
+body.dark-mode #importTasks, 
+body.dark-mode #exportTasks {
+    background-color: #ffa726;
+    color: #1e1e1e;
+}
+
+body.dark-mode #importTasks:hover,
+body.dark-mode #exportTasks:hover {
+    background-color: #ffb74d;
+}
+
+
+/* --- Dark Mode --- */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+body.dark-mode #inputToDo {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+}
+
+body.dark-mode #addToDo {
+    background-color: #388e3c;
+    color: white;
+}
+
+body.dark-mode #addToDo:hover {
+    background-color: #2e7d32;
+}
+
+body.dark-mode .filters button {
+    background-color: #1976d2;
+    color: white;
+}
+
+body.dark-mode .filters button:hover {
+    background-color: #1565c0;
+}
+
+body.dark-mode .task {
+    background-color: #2c2c2c;
+    border: 1px solid #555;
+}
+
+body.dark-mode .unfinished:hover {
+    background-color: rgba(210, 140, 140, 0.3);
+    color: #f0f0f0;
+}
+
+body.dark-mode .finished:hover {
+    background-color: rgba(56, 142, 60, 0.3);
+    color: #f0f0f0;
+}
+
+body.dark-mode .delete {
+    background-color: #e53935;
+    color: white;
+}
+
+body.dark-mode #progressContainer {
+    background-color: #555;
+}
+
+body.dark-mode #progressBar {
+    background-color: #4caf50;
+}
+
+body.dark-mode #importTasks, 
+body.dark-mode #exportTasks {
+    background-color: #ffa726;
+    color: #1e1e1e;
+}
+
+body.dark-mode #importTasks:hover,
+body.dark-mode #exportTasks:hover {
+    background-color: #ffb74d;
+}

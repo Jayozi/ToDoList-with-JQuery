@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do to list - Krystian Koza</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <label for="zadania">Podaj zadanie</label>
+    <input type="text" name="zadania" id="inputToDo" autocomplete="off">
+    <button id="addToDo">Dodaj zadanie</button>
+    <div id="ToDoContainer"></div>
+    
+    <div class="filters">
+        <button id="filterAll">Wszystkie</button>
+        <button id="filterActive">Aktywne</button>
+        <button id="filterCompleted">Ukończone</button>
+
+        <button id="clearCompleted">Wyczyść ukończone</button>
+        <p>Pozostało zadań: <span id="taskCounter">0</span></p>
+    </div>
+
+    <div id="progressContainer">
+    <div id="progressBar"></div>
+</div>
+
+    <div class="theme-switcher">
+        <label for="toggleTheme">Tryb Dark / Light</label>
+        <input type="checkbox" id="toggleTheme" checked>
+    </div>
+
+    <button id="importTasks">Importuj</button>
+    <button id="exportTasks">Eksportuj</button>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/storage.js"></script>
+</body>
+</html>

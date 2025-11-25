@@ -1,0 +1,5 @@
+[
+    { "id": 1, "text": "Zrobić zakupy", "done": false },
+    { "id": 2, "text": "Napisać projekt", "done": true },
+    { "id": 3, "text": "Przeczytać książkę", "done": false }
+]
