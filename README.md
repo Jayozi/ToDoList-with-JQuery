@@ -24,6 +24,9 @@ Interaktywna aplikacja lista zadań (To-Do List) stworzona przy użyciu HTML, CS
 
 ## Struktura projektu
 
+## Struktura projektu
+
+```plaintext
 /todo-project
 │
 ├── index.html
@@ -35,6 +38,7 @@ Interaktywna aplikacja lista zadań (To-Do List) stworzona przy użyciu HTML, CS
 └── data/
     └── sample.json
 
+```
 
 ---
 
